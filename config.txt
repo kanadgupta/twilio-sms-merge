@@ -1,4 +1,4 @@
-account_sid=YOUR_ACCT_SID_HERE
-auth_token=YOUR_AUTH_TOKEN_HERE
+twilio_account_sid=YOUR_ACCT_SID_HERE
+twilio_auth_token=YOUR_AUTH_TOKEN_HERE
 twilio_number=1-987-654-3210
 text_body=Hello {{1}}! This is the doctor's office. Friendly reminder that your appointment is on {{2}}. Your doctor is: {{3}}\n\nSee you then!

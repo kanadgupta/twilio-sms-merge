@@ -1,7 +1,3 @@
-# pip install twilio
-# go to https://twilio.com/user/account for config info
-# python send_sms.py
-
 # Download the twilio-python library from http://twilio.com/docs/libraries
 from twilio.rest import TwilioRestClient
 import csv, re
@@ -59,8 +55,8 @@ def buildTextString(body, values=[]):
     return outputBody
 
 # Find these values at https://twilio.com/user/account
-account_sid = lookup['account_sid']
-auth_token = lookup['auth_token']
+account_sid = lookup['twilio_account_sid']
+auth_token = lookup['twilio_auth_token']
 twilio_number = cleanNumber(lookup['twilio_number'])
 
 numbers_dict = importCSV()
@@ -70,6 +66,5 @@ client = TwilioRestClient(account_sid, auth_token)
 for number, values in numbers_dict.iteritems(): # for dict with values in body
     textBody = buildTextString(lookup['text_body'], values)
 
-    print number, twilio_number, textBody
-    # message = client.messages.create(to=number, from_=twilio_number,
-    #                                  body=textBody)
+    message = client.messages.create(to=number, from_=twilio_number,
+                                     body=textBody)
