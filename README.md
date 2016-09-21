@@ -60,6 +60,7 @@ Here is the example message in `config.txt`:
 > appointment is on {{2}}. Your doctor is: {{3}}\n\nSee you then!
 
 As previously mentioned, the column headers of the CSV can say anything. In terms of how the columns get populated into your message, this is how the script reads the table:
+
 | recipient_number | {{1}}   | {{2}}          | {{3}}          |
 |------------------|---------|----------------|----------------|
 | 1 (888) 888-8888 | Kanye   | October 1st    | Dr. Kardashian |
