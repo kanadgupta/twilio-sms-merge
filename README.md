@@ -24,6 +24,7 @@ Basic Requirements:
 Setup
 -------------
 Open up a Terminal window and run the following:
+
     $ pip install twilio
 
 This downloads the necessary packages to properly interact with Twilio's API and send the text messages -- and only needs to be executed before the first time the script is used on your machine.
