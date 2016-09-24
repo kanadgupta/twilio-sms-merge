@@ -61,15 +61,22 @@ Non-digit characters (parentheses, dashes, spaces, plus signs, etc.) will be ign
 
 Here is the example message in `config.txt`:
 
-> Hello {{1}}! This is the doctor's office. Friendly reminder that your
-> appointment is on {{2}}. Your doctor is: {{3}}\n\nSee you then!
+> Hello {{1}}! This is the doctor's office. Friendly reminder that your appointment is on {{2}}. Your doctor is: {{3}}\n\nSee you then!
 
 As previously mentioned, the column headers of the CSV can say anything. In terms of how the columns get populated into your message, this is how the script reads the table:
+
 | recipient_number | {{1}}   | {{2}}          | {{3}}          |
 |------------------|---------|----------------|----------------|
 | 1 (888) 888-8888 | Kanye   | October 1st    | Dr. Kardashian |
 
-To add a column of data into your message, simply write `{{x}}` in it, where `x` refers to the column index number using the above notation.
+The following message would be sent to +1 (888) 888-8888:
+> Hello Kanye! This is the doctor's office. Friendly reminder that your appointment is on October 1st. Your doctor is: Dr. Kardashian.
+>
+> See you then!
+
+To add a column of data into your message, simply write `{{x}}` in it, where `x` refers to the column index number using the above notation. The order of these snippets within the actual text body does not matter, just as long as they correctly correspond to the columns in the CSV.
+
+To add a line break into your message, simply write `\n` in the message.
 
 If the message does not need to be personalized for each recipient, simply remove any `{{x}}` elements from your message and confine your CSV file to one column with phone numbers.
 
