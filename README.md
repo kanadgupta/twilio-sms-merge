@@ -23,7 +23,12 @@ Basic Requirements:
 
 Setup
 -------------
-First, [download the files](https://github.com/kanadgupta/twilio-sms-merge/archive/master.zip) and unzip them. All the files must be in the same folder on your machine in order for this to run, so make sure they're all in one place!
+Open up a Terminal window and run the following:
+    $ pip install twilio
+
+This downloads the necessary packages to properly interact with Twilio's API and send the text messages -- and only needs to be executed before the first time the script is used on your machine.
+
+The next step is to [download the files](https://github.com/kanadgupta/twilio-sms-merge/archive/master.zip) and unzip them. All the files must be in the same folder on your machine in order for this to run, so make sure they're all in one place!
 
 The first requirement after to obtain the following three things from your Twilio account (all of which can be found [here](https://twilio.com/user/account)):
 
@@ -70,13 +75,7 @@ If the message does not need to be personalized for each recipient, simply remov
 
 Executing the script
 -------------
-Once all of your files are properly configured, open up a Terminal and run the following command:
-
-    $ pip install twilio
-
-This downloads the necessary packages to properly interact with Twilio's API and send the text messages -- and only needs to be executed before the first time the script is used on your machine.
-
-After double-checking that your CSV and configuration file have everything ready to go, navigate to the directory that contains these files and run the following command:
+After double-checking that your CSV and configuration file have everything ready to go, open up a Terminal, navigate to the directory that contains these files and run the following command:
 
     $ python send_sms.py
 
